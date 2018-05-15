@@ -1,0 +1,67 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>OCR Translator</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-title text-center>
+    <div id="title">
+      OCR Translator
+    </div>
+  </ion-title>
+  <hr>
+
+  <ion-card class="option" color="primary">
+    <ion-card-header text-center>
+      <p class="btnOption" ion-button text-uppercase>
+        To :
+        <ion-select [(ngModel)]="target">
+          <div *ngFor="let code of languages">
+            <ion-option [value]="code.short">{{code.full}}</ion-option>
+          </div>
+        </ion-select>
+      </p>
+    </ion-card-header>
+    <ion-card-content color="white" text-center>
+      <p class="btnOption" ion-button text-uppercase>
+        <ion-label>Enter link of the image: </ion-label>
+      </p>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="imgURL"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!--<ion-item>-->
+    <!--<ion-label>To</ion-label>-->
+    <!--<ion-select [(ngModel)]="target" >-->
+      <!--<div *ngFor="let code of languages">-->
+        <!--<ion-option [value]="code.short">{{code.full}}</ion-option>-->
+      <!--</div>-->
+    <!--</ion-select>-->
+  <!--</ion-item>-->
+  <!--<ion-item>-->
+    <!--<ion-label>Enter link of the image: </ion-label>-->
+  <!--</ion-item>-->
+  <!--<ion-item>-->
+    <!--<ion-input type="text" [(ngModel)]="imgURL"></ion-input>-->
+  <!--</ion-item>-->
+
+
+
+  {{this.result[0]}}
+
+  <div  text-center>
+    <button ion-button (click)="translate()">
+      Translate
+    </button>
+    <button ion-button id="speakBtn" (click)="speak()">
+      Speak
+    </button>
+  </div>
+</ion-content>

@@ -1,0 +1,26 @@
+page-home {
+  #container{
+    #title {
+      font-size: 20px;
+      color: color($colors, light);
+      .jolt {
+        color: color($colors, primary);
+      }
+    }
+
+    .option{
+
+      .btnOption{
+        width: 85%;
+        background-color: color($colors, dark);
+
+      }
+      .btnOption:hover{
+        background-color: color($colors, light);
+      }
+    }
+  }
+  .scroll-content {
+    overflow-y: hidden;
+  }
+}

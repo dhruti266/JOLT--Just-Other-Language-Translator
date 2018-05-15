@@ -1,0 +1,25 @@
+page-reg-translator {
+  ion-textarea{
+    border: 1px solid #ccc;
+    background-color: whitesmoke;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btnOption{
+    width: 100%;
+    background-color: color($colors, light);
+    margin-bottom: 20px;
+  }
+  #title {
+    font-size: 20px;
+    color: color($colors, dark);
+  }
+  .option{
+    padding: 20px 0px;
+  }
+  .scroll-content {
+    overflow-y: hidden;
+  }
+}

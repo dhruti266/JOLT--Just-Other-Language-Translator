@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      JOLT
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="container">
+  <ion-title>
+    <div id="title" text-center>
+      <span class="jolt">J</span>ust <span class="jolt">O</span>ther <span class="jolt">L</span>anguage <span class="jolt">T</span>ranslator
+    </div>
+  </ion-title>
+  <hr>
+
+  <ion-card class="option" color="primary">
+    <ion-card-header text-center>
+      <button class="btnOption" ion-button (click)="regTranslator()" text-uppercase>
+        Regular Translator
+      </button>
+    </ion-card-header>
+    <ion-card-content color="white" text-center>
+      Regular Translator to translate from one language to other languages by typing some text.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="option" color="primary">
+    <ion-card-header text-center>
+      <button class="btnOption" ion-button (click)="ocrTranslator()" text-uppercase>
+        OCR Translator
+      </button>
+    </ion-card-header>
+    <ion-card-content color="white" text-center>
+      OCR Translator to translate from one language to other languages by fetching the text from an image url.    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="option" color="primary">
+    <ion-card-header text-center>
+      <button class="btnOption" ion-button (click)="imgTranslator()" text-uppercase>
+        Image Translator
+      </button>
+    </ion-card-header>
+    <ion-card-content color="white" text-center>
+      Image Translator to translate from one language to other languages by uploading an image containing text.    </ion-card-content>
+  </ion-card>
+</ion-content>

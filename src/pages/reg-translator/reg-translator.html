@@ -1,0 +1,87 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Regular Translator</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-title text-center>
+    <div id="title">
+      Regular Translator
+    </div>
+  </ion-title>
+  <hr>
+  <ion-card class="option" color="primary">
+    <ion-card-header text-center>
+      <p class="btnOption" ion-button text-uppercase>
+        From :
+        <ion-select [(ngModel)]="source">
+          <div *ngFor="let code of languages">
+            <ion-option [value]="code.short">{{code.full}}</ion-option>
+          </div>
+        </ion-select>
+      </p>
+    </ion-card-header>
+    <ion-card-content color="white" text-center>
+      <ion-textarea [(ngModel)]="text">
+
+      </ion-textarea>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="option" color="primary">
+    <ion-card-header text-center>
+      <p class="btnOption" ion-button text-uppercase>
+        To :
+        <ion-select [(ngModel)]="target">
+          <div *ngFor="let code of languages">
+            <ion-option [value]="code.short">{{code.full}}</ion-option>
+          </div>
+        </ion-select>
+      </p>
+    </ion-card-header>
+    <ion-card-content color="white" text-center>
+      <ion-textarea [(ngModel)]="result[0]">
+
+      </ion-textarea>
+    </ion-card-content>
+  </ion-card>
+
+  <!--<ion-item>-->
+    <!--<ion-label>From</ion-label>-->
+    <!--<ion-select [(ngModel)]="source">-->
+      <!--<div *ngFor="let code of languages">-->
+        <!--<ion-option [value]="code.short">{{code.full}}</ion-option>-->
+      <!--</div>-->
+    <!--</ion-select>-->
+  <!--</ion-item>-->
+
+  <!--<ion-textarea [(ngModel)]="text">-->
+
+  <!--</ion-textarea>-->
+
+  <!--<ion-item>-->
+    <!--<ion-label>To</ion-label>-->
+    <!--<ion-select [(ngModel)]="target">-->
+      <!--<div *ngFor="let code of languages">-->
+        <!--<ion-option [value]="code.short">{{code.full}}</ion-option>-->
+      <!--</div>-->
+    <!--</ion-select>-->
+    <!--</ion-item>-->
+    <!--<ion-textarea [(ngModel)]="result[0]">-->
+
+    <!--</ion-textarea>-->
+
+    <div text-center>
+      <button ion-button id="translateBtn" (click)="translate()">
+        Translate
+      </button>
+      <button ion-button id="speakBtn" (click)="speak()">
+        Speak
+      </button>
+    </div>
+</ion-content>

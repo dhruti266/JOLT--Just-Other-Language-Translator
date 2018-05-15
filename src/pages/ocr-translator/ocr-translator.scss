@@ -1,0 +1,28 @@
+page-ocr-translator {
+  ion-textarea{
+    border: 1px solid #ccc;
+    background-color: whitesmoke;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  textarea{
+    height: 100px;
+  }
+  #translateBtn{
+    margin-top: 20px;
+    width: 85%;
+  }
+  .btnOption{
+    width: 100%;
+    background-color: color($colors, light);
+    margin-bottom: 20px;
+  }
+  #title {
+    font-size: 20px;
+    color: color($colors, dark);
+  }
+  .option {
+    padding: 10px 0px;
+  }
+}
